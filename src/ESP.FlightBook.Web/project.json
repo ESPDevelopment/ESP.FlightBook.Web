@@ -1,6 +1,6 @@
 {
   "title": "ESP FlightBook",
-  "copyright": "ESP Development (c) 2016",
+  "copyright": "Copyright (c) 2016 ESP Development",
   "description": "The online logbook for general aviation pilots.",
   "language": "en",
   "dependencies": {
@@ -63,7 +63,7 @@
   },
 
   "scripts": {
-    "prepublish": [ "bower install", "dotnet bundle" ],
+    "prepublish": [ "npm install", "bower install", "gulp Clean", "gulp Deploy" ],
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }
